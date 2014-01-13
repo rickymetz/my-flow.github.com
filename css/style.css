@@ -10,11 +10,13 @@ h1 {
   color: #fc4e08;
   font-family: Georgia, serif;
   font-size: 4em;
+  font-weight: normal;
 }
 h2 {
   color: #ffffff;
   font-family: Georgia, serif;
   font-size: 1.5em;
+  font-weight: normal;
 }
 a {
   color: #878787;
