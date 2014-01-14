@@ -16,10 +16,10 @@
       service: 'lastfm',
       user: 'my-flow'
     },
-    // {
-    //   service: 'pinboard',
-    //   user: 'my-flow'
-    // },
+    {
+      service: 'pinboard',
+      user: 'my-flow'
+    },
     // {
     //   service: 'rss',
     //   user: 'https://feeds.pinboard.in/rss/u:my-flow/'
@@ -73,7 +73,7 @@
     feedloaded: function(){
       count++;
       // Check if all the feeds have been loaded
-      if( count === list.length ){
+      if( count === list.length + 1){
         $("#lifestream li").each(function(){
           var element = $(this),
               date = new Date(element.data("time"));
