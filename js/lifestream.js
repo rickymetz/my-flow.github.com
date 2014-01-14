@@ -16,15 +16,15 @@
       service: 'lastfm',
       user: 'my-flow'
     },
-    {
-      service: 'pinboard',
-      user: 'my-flow'
-    },
+    // {
+    //   service: 'pinboard',
+    //   user: 'my-flow'
+    // },
     // {
     //   service: 'rss',
     //   user: 'https://feeds.pinboard.in/rss/u:my-flow/'
     // },
-    // // Run javascript:alert(userid); when you're logged in at stackoverflow
+    // Run javascript:alert(userid); when you're logged in at stackoverflow
     {
       service: 'stackoverflow',
       user: '662636'
@@ -41,10 +41,10 @@
     //   service: 'vimeo',
     //   user: 'myflow'
     // },
-    // {
-    //   service: 'youtube',
-    //   user: 'myflowdotcom'
-    // },
+    {
+      service: 'youtube',
+      user: 'myflowdotcom'
+    },
   ];
 
   Date.prototype.toISO8601 = function(date) {

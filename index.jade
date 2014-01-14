@@ -1,7 +1,7 @@
-doctype html
-html(lang='en')
+doctype transitional
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   head
-    meta(charset='utf-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='')
     meta(name='author', content=author)
@@ -22,18 +22,19 @@ html(lang='en')
         // <![endif]
 
     // Google Web Fonts
-    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro')
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Crimson+Text')
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Allerta')
 
     // jQuery Lifestream
     link(rel='stylesheet', type='text/css', href='css/lifestream.css')
-    script(type='text/javascript', charset='utf-8', src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
-    script(type='text/javascript').
-        !window.jQuery && document.write('<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"><\/script>');
+    script(type='text/javascript', charset='utf-8', src='js/jquery-1.10.2.min.js')
     script(type='text/javascript', charset='utf-8', src='js/jquery.lifestream.min.js')
-    script(type='text/javascript', charset='utf-8', src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js")
+    script(type='text/javascript', charset='utf-8', src="js/jquery.timeago-1.3.1.js")
 
 
   body
+  
+    #background_wrap
 
     // Wrap all page content here
     #wrap
@@ -54,70 +55,70 @@ html(lang='en')
             .row
               .col-lg-2
                 a(href='http://www.last.fm/user/my-flow')
-                  img(src='img/icon-last-fm.png', alt='last.fm')
+                  img(src='img/icon-last-fm.png', alt='last.fm', width=32, height=32)
               .col-lg-4
                 a(href='http://www.last.fm/user/my-flow') Music on Last.fm
 
             .row
               .col-lg-2
                 a(href='http://soundcloud.com/my-flow')
-                  img(src='img/icon-soundcloud.png', alt='Soundcloud')
+                  img(src='img/icon-soundcloud.png', alt='Soundcloud', width=32, height=32)
               .col-lg-4
                 a(href='http://soundcloud.com/my-flow') Audio on Soundcloud
 
             .row
               .col-lg-2
                 a(href='http://muctransit.my-flow.com/')
-                  img(src='img/icon-appstore.png', alt='App Store')
+                  img(src='img/icon-appstore.png', alt='App Store', width=32, height=32)
               .col-lg-4
                 a(href='http://muctransit.my-flow.com/') Apps on the App Store
 
             .row
               .col-lg-2
                 a(href='http://www.linkedin.com/in/florianjbreunig')
-                  img(src='img/icon-linked-in.png', alt='LinkedIn')
+                  img(src='img/icon-linked-in.png', alt='LinkedIn', width=32, height=32)
               .col-lg-4
                 a(href='http://www.linkedin.com/in/florianjbreunig') Profile on LinkedIn
 
             .row
               .col-lg-2
                 a(href='http://www.github.com/my-flow')
-                  img(src='img/icon-github.png', alt='GitHub')
+                  img(src='img/icon-github.png', alt='GitHub', width=32, height=32)
               .col-lg-4
                 a(href='http://www.github.com/my-flow') Repositories on GitHub
 
             .row
               .col-lg-2
                 a(href='http://blog.my-flow.com/')
-                  img(src='img/icon-tumblr.png', alt='Tumblr')
+                  img(src='img/icon-tumblr.png', alt='Tumblr', width=32, height=32)
               .col-lg-4
                 a(href='http://blog.my-flow.com/') Blog on Tumblr
 
             .row
               .col-lg-2
                 a(href='http://instagr.am/myflowcom')
-                  img(src='img/icon-instagram.png', alt='Instagram')
+                  img(src='img/icon-instagram.png', alt='Instagram', width=32, height=32)
               .col-lg-4
                 a(href='http://instagr.am/myflowcom') Photos on Instagram
 
             .row
               .col-lg-2
                 a(href='http://vimeo.com/myflow')
-                  img(src='img/icon-vimeo.png', alt='Vimeo')
+                  img(src='img/icon-vimeo.png', alt='Vimeo', width=32, height=32)
               .col-lg-4
                 a(href='http://vimeo.com/myflow') Videos on Vimeo
 
             .row
               .col-lg-2
                 a(href='https://www.youtube.com/user/myflowdotcom/')
-                  img(src='img/icon-youtube.png', alt='YouTube')
+                  img(src='img/icon-youtube.png', alt='YouTube', width=32, height=32)
               .col-lg-4
                 a(href='https://www.youtube.com/user/myflowdotcom/') Videos on YouTube
 
             .row
               .col-lg-2
                 a(href='https://www.facebook.com/florian.j.breunig')
-                  img(src='img/icon-facebook.png', alt='Facebook')
+                  img(src='img/icon-facebook.png', alt='Facebook', width=32, height=32)
               .col-lg-4
                 a(href='https://www.facebook.com/florian.j.breunig') Updates on Facebook
 
@@ -125,7 +126,7 @@ html(lang='en')
             .row
               .col-lg-2
                 a(href='mailto:florian.j.breunig@my-flow.com')
-                  img(src='img/icon-mail.png', alt='Mail')
+                  img(src='img/icon-mail.png', alt='Mail', width=32, height=32)
               .col-lg-4
                 a(href='mailto:florian.j.breunig@my-flow.com') Say hello@my-flow.com
 
@@ -134,7 +135,7 @@ html(lang='en')
 
         .panel-heading
 
-          h2 Lifestream
+          h3 Lifestream
 
 
         .panel-body
@@ -142,15 +143,18 @@ html(lang='en')
             #lifestream
             script(type='text/javascript', charset='utf-8', src='js/lifestream.js').
 
-    script(type='text/javascript').
-      //<![CDATA[
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-661182-7']);
-          _gaq.push(['_setDomainName', '.github.io']);
-          _gaq.push(['_trackPageview']);
-          (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-      //]]>
+
+    if includeTrackingCode
+
+        script(type='text/javascript').
+          //<![CDATA[
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-661182-7']);
+              _gaq.push(['_setDomainName', '.github.io']);
+              _gaq.push(['_trackPageview']);
+              (function() {
+                  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+          //]]>
