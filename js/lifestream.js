@@ -37,10 +37,10 @@
       service: 'twitter',
       user: 'myflow'
     },
-    // {
-    //   service: 'vimeo',
-    //   user: 'myflow'
-    // },
+    {
+      service: 'vimeo',
+      user: 'myflow'
+    },
     {
       service: 'youtube',
       user: 'myflowdotcom'

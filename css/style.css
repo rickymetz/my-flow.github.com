@@ -13,17 +13,29 @@ body {
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-position: bottom right;
+  -webkit-background-size: cover;
+  /* For WebKit*/
+
+  -moz-background-size: cover;
+  /* Mozilla*/
+
+  -o-background-size: cover;
+  /* Opera*/
+
+  background-size: cover;
+  /* Generic*/
+
 }
 h1 {
   color: #fc4e08;
   font-family: 'Allerta', Helvetica, Arial, sans-serif;
-  font-size: 3.5em;
+  font-size: 2.0em;
   font-weight: normal;
 }
 h2 {
   color: #ffffff;
   font-family: 'Allerta', Helvetica, Arial, sans-serif;
-  font-size: 1.3em;
+  font-size: 1.0em;
   font-weight: normal;
 }
 h3 {
@@ -38,11 +50,46 @@ a {
 a:hover {
   color: #ffffff;
 }
+.navbar {
+  font-family: 'Allerta', Helvetica, Arial, sans-serif;
+}
+.navbar ul li {
+  font-size: 1.5em;
+  border-left: solid 1px #878787;
+  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition-delay: 0;
+  -moz-transition: all 0.2s ease-out 0;
+  -o-transition: all 0.2s ease-out 0;
+  transition: all 0.2s ease-out 0;
+}
+.navbar ul li a {
+  padding-left: 2ex !important;
+  padding-right: 2ex !important;
+}
+.navbar ul li a:active,
+.navbar ul li a:focus {
+  background-color: #fc4e08 !important;
+}
+.navbar ul li:hover {
+  background-color: #fc4e08 !important;
+}
+.navbar ul.navbar-left li:last-child {
+  border-right: solid 1px #878787;
+}
+.navbar ul.navbar-left li:first-child {
+  border-left: none;
+}
+.navbar-inverse {
+  background: rgba(0, 0, 0, 0.7);
+}
+.navbar-brand {
+  font-size: 1.5em;
+}
 .panel {
   width: auto;
   min-width: 20em;
   max-width: 33em;
-  margin: 5em 5em;
+  margin: 5em 1em;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .col-lg-2 {
@@ -76,4 +123,30 @@ ul li {
 }
 #lifestream .timeago {
   opacity: .7;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .panel {
+    margin: 5em 5em;
+  }
+  #background_wrap {
+    -webkit-background-size: inherit;
+    /* For WebKit*/
+  
+    -moz-background-size: inherit;
+    /* Mozilla*/
+  
+    -o-background-size: inherit;
+    /* Opera*/
+  
+    background-size: inherit;
+    /* Generic*/
+  
+  }
 }

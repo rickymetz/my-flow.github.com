@@ -1,4 +1,4 @@
-doctype transitional
+doctype html
 html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   head
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
@@ -9,11 +9,8 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
     title=author
 
-    // Bootstrap core CSS
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-
-    // Custom styles for this template
-    link(rel='stylesheet', href='css/style.css')
+    // Font Awesome
+    link(rel='stylesheet' type='text/css' href='font-awesome-4.0.3/css/font-awesome.min.css')
 
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //[if lt IE 9]>
@@ -27,14 +24,55 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
     // jQuery Lifestream
     link(rel='stylesheet', type='text/css', href='css/lifestream.css')
-    script(type='text/javascript', charset='utf-8', src='js/jquery-1.10.2.min.js')
+    script(type='text/javascript', charset='utf-8', src='js/jquery-1.11.0.min.js')
     script(type='text/javascript', charset='utf-8', src='js/jquery.lifestream.min.js')
     script(type='text/javascript', charset='utf-8', src="js/jquery.timeago-1.3.1.js")
 
+    // Bootstrap
+    link(rel='stylesheet', href='css/bootstrap-3.0.3.min.css')
+    script(type='text/javascript', charset='utf-8', src='js/bootstrap-3.0.3.min.js')
+
+    // Custom styles for this template
+    link(rel='stylesheet', href='css/style.css')
 
   body
-  
+
     #background_wrap
+    
+    .navbar.navbar-default.navbar-fixed-top.navbar-inverse
+
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .navbar-brand.visible-xs my-flow.com
+
+      .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-left
+            li
+              a(tabindex='1', href='http://blog.my-flow.com/', target='_blank') Blog
+            li
+              a(tabindex='2', href='mailto:hello@my-flow.com') Contact
+
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(tabindex='3', href='https://github.com/my-flow', target='_blank')
+                | &nbsp;
+                i.fa.fa-github
+                | &nbsp;
+            li
+              a(tabindex='4', href='https://www.linkedin.com/in/florianjbreunig/', target='_blank')
+                | &nbsp;
+                i.fa.fa-linkedin
+                | &nbsp;
+            
+            li
+              a(tabindex='5', href='https://twitter.com/myflow', target='_blank')
+                i.fa.fa-twitter
+                | &nbsp;
 
     // Wrap all page content here
     #wrap
@@ -47,7 +85,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             h1 Florian J. Breunig
 
             h2 Information Technologist, Software Architect.
-            h2 Munich, Germany
+            h2 Munich, Germany.
 
 
         .panel-body
@@ -89,24 +127,10 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
             .row
               .col-lg-2
-                a(href='http://blog.my-flow.com/', target='_blank')
-                  img(src='img/icon-tumblr.png', alt='Tumblr', width=32, height=32)
-              .col-lg-4
-                a(href='http://blog.my-flow.com/', target='_blank') Blog on Tumblr
-
-            .row
-              .col-lg-2
                 a(href='http://instagr.am/myflowcom', target='_blank')
                   img(src='img/icon-instagram.png', alt='Instagram', width=32, height=32)
               .col-lg-4
                 a(href='http://instagr.am/myflowcom', target='_blank') Photos on Instagram
-
-            .row
-              .col-lg-2
-                a(href='http://vimeo.com/myflow', target='_blank')
-                  img(src='img/icon-vimeo.png', alt='Vimeo', width=32, height=32)
-              .col-lg-4
-                a(href='http://vimeo.com/myflow', target='_blank') Videos on Vimeo
 
             .row
               .col-lg-2
@@ -115,23 +139,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
               .col-lg-4
                 a(href='https://www.youtube.com/user/myflowdotcom/', target='_blank') Videos on YouTube
 
-            .row
-              .col-lg-2
-                a(href='https://www.facebook.com/florian.j.breunig', target='_blank')
-                  img(src='img/icon-facebook.png', alt='Facebook', width=32, height=32)
-              .col-lg-4
-                a(href='https://www.facebook.com/florian.j.breunig', target='_blank') Updates on Facebook
-
-
-            .row
-              .col-lg-2
-                a(href='mailto:florian.j.breunig@my-flow.com', target='_blank')
-                  img(src='img/icon-mail.png', alt='Mail', width=32, height=32)
-              .col-lg-4
-                a(href='mailto:florian.j.breunig@my-flow.com', target='_blank') Say hello@my-flow.com
-
-
-      .panel
+      .panel.hidden-print
 
         .panel-heading
 
