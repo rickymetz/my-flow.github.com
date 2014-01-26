@@ -1,10 +1,14 @@
 (function(){
   var count = 0,
   list = [
-    {
-      service: 'github',
-      user: 'my-flow'
-    },
+	{
+	  service: 'foursquare',
+	  user: 'XSDHURMCMOHH4PRRK0PGDFANYYEQ4RBA'
+	},
+	{
+	  service: 'github',
+	  user: 'my-flow'
+	},
     // Change the key when you're using it on your own website
     // You can create one on https://code.google.com/apis/console
     // {
@@ -80,6 +84,8 @@
           element.append(' <abbr class="timeago" title="' + date.toISO8601(date) + '">' + date + "</abbr>");
         })
         $("#lifestream .timeago").timeago();
+        $('#loading-lifestream').css('visibility','invisible').hide().fadeOut().removeClass('show');
+        $('#hidden-lifestream').css('visibility','visible').show().fadeIn().removeClass('hidden');
       }
     }
   });
