@@ -3,11 +3,22 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   head
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='description', content='')
     meta(name='author', content=author)
-    link(rel='shortcut icon', href='img/favicon.ico')
+    meta(name='description', content=description)
 
-    title=author
+    // Dublin Core
+    link(rel='schema.DC', href='http://purl.org/dc/elements/1.1/')
+    meta(name='DCTERMS.Title', content=title)
+    meta(name='DCTERMS.Creator', content=author)
+    meta(name='DCTERMS.Subject', content=title)
+    meta(name='DCTERMS.Description', content=description)
+    meta(name='DCTERMS.Date', content=new Date().toISOString().slice(0,10))
+    meta(name='DCTERMS.Language', content='en')
+
+    // favicon
+    link(rel='icon', href='img/favicon.ico')
+
+    title=title
 
     // Font Awesome
     link(rel='stylesheet' type='text/css' href='font-awesome-4.0.3/css/font-awesome.min.css')
@@ -57,16 +68,16 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             li
               a(href='https://github.com/my-flow')
                 em.fa.fa-github
-                    .hidden GitHub
+                    span.hidden GitHub
             li
               a(href='https://www.linkedin.com/in/florianjbreunig/')
                 em.fa.fa-linkedin
-                    .hidden LinkedIn
+                    span.hidden LinkedIn
             
             li
               a(href='https://twitter.com/myflow')
                 em.fa.fa-twitter
-                    .hidden Twitter
+                    span.hidden Twitter
                 | &nbsp;
 
     // Wrap all page content here
@@ -75,29 +86,36 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       // Begin page content
       .panel
 
-        .panel-heading
+        .panel-heading(itemscope, itemtype='http://data-vocabulary.org/Person')
 
-            h1 Florian J. Breunig
+            h1(itemprop='name') Florian J. Breunig
 
-            h2 Information Technologist, Software Architect.
-            h2 Munich, Germany.
+            h2 Information Technologist, 
+                span(itemprop='title') Software&nbsp;Architect
+                |.
+            h2
+                span(itemprop='address', itemscope, itemtype='http://data-vocabulary.org/Address')
+                    span(itemprop='locality') Munich
+                    |, 
+                    span(itemprop='region') Germany
+                    |.
 
 
         .panel-body
 
             .row
               .col-lg-2
-                a(href='http://www.last.fm/user/my-flow')
+                a(href='https://www.last.fm/user/my-flow')
                   img(src='img/icon-last-fm.png', alt='last.fm', width=32, height=32)
               .col-lg-4
-                a(href='http://www.last.fm/user/my-flow') Music on Last.fm
+                a(href='https://www.last.fm/user/my-flow') Music on Last.fm
 
             .row
               .col-lg-2
-                a(href='http://soundcloud.com/my-flow')
+                a(href='https://soundcloud.com/my-flow')
                   img(src='img/icon-soundcloud.png', alt='Soundcloud', width=32, height=32)
               .col-lg-4
-                a(href='http://soundcloud.com/my-flow') Audio on Soundcloud
+                a(href='https://soundcloud.com/my-flow') Audio on Soundcloud
 
             .row
               .col-lg-2
@@ -108,17 +126,24 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
             .row
               .col-lg-2
-                a(href='http://www.linkedin.com/in/florianjbreunig')
-                  img(src='img/icon-linked-in.png', alt='LinkedIn', width=32, height=32)
+                a(href='https://plus.google.com/+FlorianJBreunig?rel=author')
+                  img(src='img/icon-google-plus.png', alt='LinkedIn', width=32, height=32)
               .col-lg-4
-                a(href='http://www.linkedin.com/in/florianjbreunig') Profile on LinkedIn
+                a(href='https://plus.google.com/+FlorianJBreunig?rel=author') Profile on Google Plus
 
             .row
               .col-lg-2
-                a(href='http://www.github.com/my-flow')
+                a(href='https://www.linkedin.com/in/florianjbreunig')
+                  img(src='img/icon-linked-in.png', alt='LinkedIn', width=32, height=32)
+              .col-lg-4
+                a(href='https://www.linkedin.com/in/florianjbreunig') Profile on LinkedIn
+
+            .row
+              .col-lg-2
+                a(href='https://www.github.com/my-flow')
                   img(src='img/icon-github.png', alt='GitHub', width=32, height=32)
               .col-lg-4
-                a(href='http://www.github.com/my-flow') Repositories on GitHub
+                a(href='https://www.github.com/my-flow') Repositories on GitHub
 
             .row
               .col-lg-2
