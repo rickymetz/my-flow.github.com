@@ -3,7 +3,7 @@ body {
   font-family: 'Crimson Text', Georgia, Times, serif;
   background-color: #000000;
 }
-#background_wrap {
+#background-wrap {
   z-index: -1;
   position: fixed;
   bottom: 0;
@@ -135,7 +135,7 @@ ul li {
   .panel {
     margin: 5em 5em;
   }
-  #background_wrap {
+  #background-wrap {
     -webkit-background-size: inherit;
     /* For WebKit*/
   

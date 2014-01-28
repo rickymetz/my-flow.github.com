@@ -33,7 +33,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
   body
 
-    #background_wrap
+    #background-wrap
     
     .navbar.navbar-default.navbar-fixed-top.navbar-inverse
 
@@ -49,25 +49,24 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-left
             li
-              a(tabindex='1', href='http://blog.my-flow.com/', target='_blank') Blog
+              a(href='http://blog.my-flow.com/') Blog
             li
-              a(tabindex='2', href!='mailto:&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#x40;&#x6d;&#x79;&#x2d;&#x66;&#x6c;&#x6f;&#x77;&#x2e;&#x63;&#x6f;&#x6d;') Contact
+              a(href!='mailto:&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#x40;&#x6d;&#x79;&#x2d;&#x66;&#x6c;&#x6f;&#x77;&#x2e;&#x63;&#x6f;&#x6d;') Contact
 
           ul.nav.navbar-nav.navbar-right
             li
-              a(tabindex='3', href='https://github.com/my-flow', target='_blank')
-                | &nbsp;
-                i.fa.fa-github
-                | &nbsp;
+              a(href='https://github.com/my-flow')
+                em.fa.fa-github
+                    .hidden GitHub
             li
-              a(tabindex='4', href='https://www.linkedin.com/in/florianjbreunig/', target='_blank')
-                | &nbsp;
-                i.fa.fa-linkedin
-                | &nbsp;
+              a(href='https://www.linkedin.com/in/florianjbreunig/')
+                em.fa.fa-linkedin
+                    .hidden LinkedIn
             
             li
-              a(tabindex='5', href='https://twitter.com/myflow', target='_blank')
-                i.fa.fa-twitter
+              a(href='https://twitter.com/myflow')
+                em.fa.fa-twitter
+                    .hidden Twitter
                 | &nbsp;
 
     // Wrap all page content here
@@ -88,59 +87,52 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
             .row
               .col-lg-2
-                a(href='http://www.last.fm/user/my-flow', target='_blank')
-                  img(src='img/icon-last-fm.png', alt='last.fm', width=32, height=32)
+                a(href='http://www.last.fm/user/my-flow')
+                  img(src='img/icon-last-fm.png', alt='', width=32, height=32)
               .col-lg-4
-                a(href='http://www.last.fm/user/my-flow', target='_blank') Music on Last.fm
+                a(href='http://www.last.fm/user/my-flow') Music on Last.fm
 
             .row
               .col-lg-2
-                a(href='http://soundcloud.com/my-flow', target='_blank')
-                  img(src='img/icon-soundcloud.png', alt='Soundcloud', width=32, height=32)
+                a(href='http://soundcloud.com/my-flow')
+                  img(src='img/icon-soundcloud.png', alt='', width=32, height=32)
               .col-lg-4
-                a(href='http://soundcloud.com/my-flow', target='_blank') Audio on Soundcloud
+                a(href='http://soundcloud.com/my-flow') Audio on Soundcloud
 
             .row
               .col-lg-2
-                a(href='http://muctransit.my-flow.com/', target='_blank')
-                  img(src='img/icon-appstore.png', alt='App Store', width=32, height=32)
+                a(href='http://muctransit.my-flow.com/')
+                  img(src='img/icon-appstore.png', alt='', width=32, height=32)
               .col-lg-4
-                a(href='http://muctransit.my-flow.com/', target='_blank') Apps on the App Store
+                a(href='http://muctransit.my-flow.com/') Apps on the App Store
 
             .row
               .col-lg-2
-                a(href='http://www.linkedin.com/in/florianjbreunig', target='_blank')
-                  img(src='img/icon-linked-in.png', alt='LinkedIn', width=32, height=32)
+                a(href='http://www.linkedin.com/in/florianjbreunig')
+                  img(src='img/icon-linked-in.png', alt='', width=32, height=32)
               .col-lg-4
-                a(href='http://www.linkedin.com/in/florianjbreunig', target='_blank') Profile on LinkedIn
+                a(href='http://www.linkedin.com/in/florianjbreunig') Profile on LinkedIn
 
             .row
               .col-lg-2
-                a(href='http://www.github.com/my-flow', target='_blank')
-                  img(src='img/icon-github.png', alt='GitHub', width=32, height=32)
+                a(href='http://www.github.com/my-flow')
+                  img(src='img/icon-github.png', alt='', width=32, height=32)
               .col-lg-4
-                a(href='http://www.github.com/my-flow', target='_blank') Repositories on GitHub
+                a(href='http://www.github.com/my-flow') Repositories on GitHub
 
             .row
               .col-lg-2
-                a(href='http://instagr.am/myflowcom', target='_blank')
-                  img(src='img/icon-instagram.png', alt='Instagram', width=32, height=32)
+                a(href='http://instagr.am/myflowcom')
+                  img(src='img/icon-instagram.png', alt='', width=32, height=32)
               .col-lg-4
-                a(href='http://instagr.am/myflowcom', target='_blank') Photos on Instagram
-
-            .row
-              .col-lg-2
-                a(href='https://www.youtube.com/user/myflowdotcom/', target='_blank')
-                  img(src='img/icon-youtube.png', alt='YouTube', width=32, height=32)
-              .col-lg-4
-                a(href='https://www.youtube.com/user/myflowdotcom/', target='_blank') Videos on YouTube
+                a(href='http://instagr.am/myflowcom') Photos on Instagram
 
 
       .panel.hidden-print
 
           #loading-lifestream.show
 
-              i.panel-heading.fa.fa-spinner.fa-spin
+              em.panel-heading.fa.fa-spinner.fa-spin
 
           #hidden-lifestream.hidden
 
@@ -160,10 +152,10 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         function downloadJSAtOnload() {
             // jQuery Lifestream
             setTimeout(function(){downloadJS("js/jquery-1.11.0.min.js")}, 0);
-            setTimeout(function(){downloadJS("js/jquery.lifestream.min.js")}, 100);
-            setTimeout(function(){downloadJS("js/jquery.timeago-1.3.1.min.js")}, 200);
-            setTimeout(function(){downloadJS("js/lifestream.js")}, 200);
-            setTimeout(function(){downloadJS("js/bootstrap-3.0.3.min.js")}, 100);
+            setTimeout(function(){downloadJS("js/jquery.lifestream.min.js")}, 400);
+            setTimeout(function(){downloadJS("js/jquery.timeago-1.3.1.min.js")}, 800);
+            setTimeout(function(){downloadJS("js/lifestream.js")}, 800);
+            setTimeout(function(){downloadJS("js/bootstrap-3.0.3.min.js")}, 400);
         }
         if (window.addEventListener)
             window.addEventListener("load", downloadJSAtOnload, false);
