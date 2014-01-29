@@ -168,19 +168,42 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
     script(type='text/javascript').
         //<![CDATA[
-        function downloadJS(filename) {
-            var element = document.createElement("script");
-            element.src = filename;
-            document.body.appendChild(element);
+
+        //this function will work cross-browser for loading scripts asynchronously
+        function loadScript(src, callback)
+        {
+          var s,
+              r,
+              t;
+          r = false;
+          s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = src;
+          s.onload = s.onreadystatechange = function() {
+            // console.log( this.readyState ); //uncomment this line to see which ready states are called.
+            if ( !r && (!this.readyState || this.readyState == 'complete') )
+            {
+              r = true;
+              if (typeof callback !== 'undefined') {
+                  callback();
+              }
+            }
+          };
+          t = document.getElementsByTagName('script')[0];
+          t.appendChild(s);
         }
 
         function downloadJSAtOnload() {
             // jQuery Lifestream
-            setTimeout(function(){downloadJS("js/jquery-1.11.0.min.js")}, 0);
-            setTimeout(function(){downloadJS("js/jquery.lifestream.min.js")}, 400);
-            setTimeout(function(){downloadJS("js/jquery.timeago-1.3.1.min.js")}, 800);
-            setTimeout(function(){downloadJS("js/lifestream.js")}, 800);
-            setTimeout(function(){downloadJS("js/bootstrap-3.0.3.min.js")}, 400);
+            loadScript("js/jquery-1.11.0.min.js",
+                function() { loadScript("js/jquery.lifestream.min.js",
+                    function() { loadScript("js/jquery.timeago-1.3.1.min.js",
+                        function() { loadScript("js/lifestream.js",
+                            function() { loadScript("js/bootstrap-3.0.3.min.js") }
+                        )}
+                    )}
+                )}
+            );
         }
         if (window.addEventListener)
             window.addEventListener("load", downloadJSAtOnload, false);
@@ -194,13 +217,11 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
       script(type='text/javascript').
         //<![CDATA[
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-661182-7']);
-            _gaq.push(['_setDomainName', '.github.io']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-661182-1', 'my-flow.com');
+            ga('send', 'pageview');
         //]]>

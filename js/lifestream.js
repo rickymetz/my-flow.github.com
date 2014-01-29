@@ -1,21 +1,21 @@
 (function(){
   var count = 0,
   list = [
-	{
-	  service: 'foursquare',
-	  user: 'XSDHURMCMOHH4PRRK0PGDFANYYEQ4RBA'
-	},
-	{
-	  service: 'github',
-	  user: 'my-flow'
-	},
+    {
+      service: 'foursquare',
+      user: 'XSDHURMCMOHH4PRRK0PGDFANYYEQ4RBA'
+    },
+    {
+      service: 'github',
+      user: 'my-flow'
+    },
     // Change the key when you're using it on your own website
     // You can create one on https://code.google.com/apis/console
-    // {
-    //   service: 'googleplus',
-    //   user: '112594588017353316971',
-    //   key: 'AIzaSyCB8pKtPwGWkOMfe49CopUM40F6seVv5AE'
-    // },
+    {
+        service: 'googleplus',
+        user: '105473628603980168347',
+        key: 'AIzaSyDufMWmkcPT8v1rfvL3rR4YcpEcyuGzs4s'
+    },
     {
       service: 'lastfm',
       user: 'my-flow'

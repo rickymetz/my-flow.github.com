@@ -4,14 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Florian J. Breunig">
-    <meta name="description" content="Personal landing page of Florian J. Breunig">
+    <meta name="description" content="The official web site of Florian J. Breunig connects all profiles on the web.">
     <!-- Dublin Core-->
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
     <meta name="DCTERMS.Title" content="Florian J. Breunig">
     <meta name="DCTERMS.Creator" content="Florian J. Breunig">
     <meta name="DCTERMS.Subject" content="Florian J. Breunig">
-    <meta name="DCTERMS.Description" content="Personal landing page of Florian J. Breunig">
-    <meta name="DCTERMS.Date" content="2014-01-28">
+    <meta name="DCTERMS.Description" content="The official web site of Florian J. Breunig connects all profiles on the web.">
+    <meta name="DCTERMS.Date" content="2014-01-29">
     <meta name="DCTERMS.Language" content="en">
     <!-- favicon-->
     <link rel="icon" href="img/favicon.ico">
@@ -105,19 +105,42 @@
     </div>
     <script type="text/javascript">
       //<![CDATA[
-      function downloadJS(filename) {
-          var element = document.createElement("script");
-          element.src = filename;
-          document.body.appendChild(element);
+      
+      //this function will work cross-browser for loading scripts asynchronously
+      function loadScript(src, callback)
+      {
+        var s,
+            r,
+            t;
+        r = false;
+        s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = src;
+        s.onload = s.onreadystatechange = function() {
+          // console.log( this.readyState ); //uncomment this line to see which ready states are called.
+          if ( !r && (!this.readyState || this.readyState == 'complete') )
+          {
+            r = true;
+            if (typeof callback !== 'undefined') {
+                callback();
+            }
+          }
+        };
+        t = document.getElementsByTagName('script')[0];
+        t.appendChild(s);
       }
       
       function downloadJSAtOnload() {
           // jQuery Lifestream
-          setTimeout(function(){downloadJS("js/jquery-1.11.0.min.js")}, 0);
-          setTimeout(function(){downloadJS("js/jquery.lifestream.min.js")}, 400);
-          setTimeout(function(){downloadJS("js/jquery.timeago-1.3.1.min.js")}, 800);
-          setTimeout(function(){downloadJS("js/lifestream.js")}, 800);
-          setTimeout(function(){downloadJS("js/bootstrap-3.0.3.min.js")}, 400);
+          loadScript("js/jquery-1.11.0.min.js",
+              function() { loadScript("js/jquery.lifestream.min.js",
+                  function() { loadScript("js/jquery.timeago-1.3.1.min.js",
+                      function() { loadScript("js/lifestream.js",
+                          function() { loadScript("js/bootstrap-3.0.3.min.js") }
+                      )}
+                  )}
+              )}
+          );
       }
       if (window.addEventListener)
           window.addEventListener("load", downloadJSAtOnload, false);
