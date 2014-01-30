@@ -1,0 +1,28 @@
+extends template
+
+
+block vars
+
+  - var title = '404 Page not found'
+
+
+block background-wrap
+
+  .background-wrap.static
+
+
+block content
+
+  .panel
+
+    .panel-heading
+
+        h2 Error 404
+
+        h2 Page not found
+
+    .panel-body
+
+        |The page you requested was not found. Go back to the 
+        a(href=url) main page
+        |.

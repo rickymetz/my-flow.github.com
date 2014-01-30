@@ -1,0 +1,148 @@
+doctype html
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  block vars
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content=author)
+    meta(name='description', content=description)
+
+    // Dublin Core
+    link(rel='schema.DC', href='http://purl.org/dc/elements/1.1/')
+    meta(name='DCTERMS.Title', content=title)
+    meta(name='DCTERMS.Creator', content=author)
+    meta(name='DCTERMS.Subject', content=title)
+    meta(name='DCTERMS.Description', content=description)
+    meta(name='DCTERMS.Date', content=new Date().toISOString().slice(0,10))
+    meta(name='DCTERMS.Language', content='en')
+
+    // favicon
+    link(rel='icon', href='img/favicon.ico')
+
+    title #{title}
+
+    // Font Awesome
+    link(rel='stylesheet' type='text/css' href='font-awesome-4.0.3/css/font-awesome.min.css')
+
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        // <![endif]
+
+    // Google Web Fonts
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Crimson+Text')
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Allerta')
+
+    // jQuery Lifestream
+    link(rel='stylesheet', type='text/css', href='css/lifestream.css')
+
+    // Bootstrap
+    link(rel='stylesheet', href='css/bootstrap-3.0.3.min.css')
+
+    // Custom styles for this template
+    link(rel='stylesheet', href='css/style.css')
+
+  body
+
+    block background-wrap
+    
+    .navbar.navbar-default.navbar-fixed-top.navbar-inverse
+
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .navbar-brand.visible-xs my-flow.com
+
+      .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-left
+            li
+              a(href='http://blog.my-flow.com/') Blog
+            li
+              a(href!='mailto:&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#x40;&#x6d;&#x79;&#x2d;&#x66;&#x6c;&#x6f;&#x77;&#x2e;&#x63;&#x6f;&#x6d;') Contact
+
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='https://github.com/my-flow')
+                em.fa.fa-github
+                    span.hidden GitHub
+            li
+              a(href='https://www.linkedin.com/in/florianjbreunig/')
+                em.fa.fa-linkedin
+                    span.hidden LinkedIn
+            
+            li
+              a(href='https://twitter.com/myflow')
+                em.fa.fa-twitter
+                    span.hidden Twitter
+                | &nbsp;
+
+    // Wrap all page content here
+    #wrap
+
+      // Begin page content
+      block content
+
+
+    script(type='text/javascript').
+        //<![CDATA[
+
+        //this function will work cross-browser for loading scripts asynchronously
+        function loadScript(src, callback)
+        {
+          var s,
+              r,
+              t;
+          r = false;
+          s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = src;
+          s.onload = s.onreadystatechange = function() {
+            // console.log( this.readyState ); //uncomment this line to see which ready states are called.
+            if ( !r && (!this.readyState || this.readyState == 'complete') )
+            {
+              r = true;
+              if (typeof callback !== 'undefined') {
+                  callback();
+              }
+            }
+          };
+          t = document.getElementsByTagName('script')[0];
+          t.appendChild(s);
+        }
+
+        function downloadJSAtOnload() {
+            // jQuery Lifestream
+            loadScript("js/jquery-1.11.0.min.js",
+                function() { loadScript("js/jquery.lifestream.min.js",
+                    function() { loadScript("js/jquery.timeago-1.3.1.min.js",
+                        function() { loadScript("js/lifestream.js") }
+                    )}
+                )}
+            );
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else
+            window.onload = downloadJSAtOnload;
+        //]]>
+
+
+    if includeTrackingCode
+
+      script(type='text/javascript').
+        //<![CDATA[
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-661182-1', 'my-flow.com');
+            ga('send', 'pageview');
+        //]]>

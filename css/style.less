@@ -11,15 +11,18 @@ body {
   background-color: @background-color;
 }
 
-#background-wrap {
+.background-wrap {
   z-index: -1;
   position: fixed;
   bottom: 0;
   right: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
+}
+  
+.resize {
+  background-image: url(../img/background.jpg);
   background-position: bottom right;
   -webkit-background-size: cover; /* For WebKit*/
   -moz-background-size: cover;    /* Mozilla*/
@@ -27,17 +30,27 @@ body {
   background-size: cover;         /* Generic*/
 }
 
+.static {
+  background-image: url(../img/not-found.gif);
+  background-position: bottom center;
+  -webkit-background-size: inherit; /* For WebKit*/
+  -moz-background-size: inherit;    /* Mozilla*/
+  -o-background-size: inherit;      /* Opera*/
+  background-size: inherit;         /* Generic*/
+}
+
+
 h1 {
   color: @color1;
   font-family: @font-family-head;
-  font-size: 2.0em;
+  font-size: 3em !important;
   font-weight: normal;
 }
 
 h2 {
   color: @color3;
   font-family: @font-family-head;
-  font-size: 1.0em;
+  font-size: 1.1em !important;
   font-weight: normal;
 }
 
@@ -111,6 +124,7 @@ a:hover {
   max-width: 33em;
   margin: 5em 1em;
   background-color: rgba(0, 0, 0, .7);
+  font-size: 1.2em;
 }
 
 .col-lg-2 {
@@ -127,7 +141,7 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 ul li {
@@ -169,7 +183,7 @@ ul li {
       margin: 5em 5em;
     }
 
-    #background-wrap {
+    .background-wrap {
         -webkit-background-size: inherit; /* For WebKit*/
         -moz-background-size: inherit;    /* Mozilla*/
         -o-background-size: inherit;      /* Opera*/
