@@ -1,6 +1,6 @@
 {
-   "url": "http://dev.my-flow.com",
+   "url": "http://www.my-flow.com",
    "author": "Florian J. Breunig",
    "description": "The official web site of Florian J. Breunig connects all profiles on the web.",
-   "includeTrackingCode": false
+   "includeTrackingCode": true
 }
