@@ -11,6 +11,21 @@ body {
   background-color: @background-color;
 }
 
+#nprogress {
+  .bar {
+    background: @color1;
+  }
+
+ .peg {
+    box-shadow: 0 0 10px #29d, 0 0 5px @color1;
+  }
+}
+
+#nprogress .spinner {
+  display: none;
+  visibility: hidden;
+}
+
 .background-wrap {
   z-index: -1;
   position: fixed;

@@ -21,6 +21,10 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
     title #{title}
 
+    // NProgress
+    link(rel='stylesheet', href='nprogress-0.1.2/nprogress.css')
+    link(rel='stylesheet', href='css/nprogress-bootstrap.css')
+
     // Font Awesome
     link(rel='stylesheet' type='text/css' href='font-awesome-4.0.3/css/font-awesome.min.css')
 
@@ -118,10 +122,12 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         function downloadJSAtOnload() {
             // jQuery Lifestream
             loadScript("js/jquery-1.11.0.min.js",
-                function() { loadScript("js/jquery.lifestream.min.js",
-                    function() { loadScript("js/jquery.timeago-1.3.1.min.js",
-                        function() { loadScript("js/lifestream.js",
-                            function() { loadScript("js/bootstrap-3.0.3.min.js") }
+                function() { loadScript("nprogress-0.1.2/nprogress.js",
+                    function() { loadScript("js/jquery.lifestream.min.js",
+                        function() { loadScript("js/jquery.timeago-1.3.1.min.js",
+                            function() { loadScript("js/lifestream.js",
+                                function() { loadScript("js/bootstrap-3.0.3.min.js") }
+                            )}
                         )}
                     )}
                 )}

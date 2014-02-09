@@ -78,6 +78,7 @@
       count++;
       // Check if all the feeds have been loaded
       if( count === list.length + 1){
+        NProgress.done();
         $("#lifestream li").each(function(){
           var element = $(this),
               date = new Date(element.data("time"));
@@ -86,6 +87,8 @@
         $("#lifestream .timeago").timeago();
         $('#loading-lifestream').css('visibility','invisible').hide().fadeOut().removeClass('show');
         $('#hidden-lifestream').css('visibility','visible').show().fadeIn().removeClass('hidden');
+      } else if (count % 2 == 0) {
+        NProgress.inc();
       }
     }
   });

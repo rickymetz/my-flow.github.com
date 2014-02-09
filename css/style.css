@@ -3,6 +3,16 @@ body {
   font-family: 'Crimson Text', Georgia, Times, serif;
   background-color: #000000;
 }
+#nprogress .bar {
+  background: #fc4e08;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #2299dd, 0 0 5px #fc4e08;
+}
+#nprogress .spinner {
+  display: none;
+  visibility: hidden;
+}
 .background-wrap {
   z-index: -1;
   position: fixed;
