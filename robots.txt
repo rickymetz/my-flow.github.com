@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /alphanum/docs/
 Disallow: /importlist/docs/
 Disallow: /paypalimporter/docs/
