@@ -1,14 +1,14 @@
 @color1: #FC4E08; // orange
 @color2: #878787; // gray
 @color3: white;   // white
-@background-color: black;
+@body-bg: black;
 @font-family-head: 'Allerta', Helvetica, Arial, sans-serif;
 @font-family-body: 'Crimson Text', Georgia, Times, serif;
 
 body {
   color: @color2;
   font-family: @font-family-body;
-  background-color: @background-color;
+  background-color: @body-bg;
 }
 
 #nprogress {
@@ -161,6 +161,15 @@ a:hover {
 
 ul li {
   list-style-type: none;
+}
+
+input:focus, textarea:focus {
+  border-color: rgba(red(@color1), green(@color1), blue(@color1), 0.8) !important;
+}
+
+.btn-primary {
+  background-color: @color1 !important;
+  border-color: @color1 !important;
 }
 
 #lifestream {

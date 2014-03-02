@@ -1,0 +1,35 @@
+extends content-template
+
+block vars
+
+  - var title = 'Florian J. Breunig'
+
+
+block background-wrap
+
+  .background-wrap.resize
+
+
+block content
+
+  .panel
+
+    .panel-heading(itemscope, itemtype='http://data-vocabulary.org/Person')
+
+        h1 Contact
+
+
+    .panel-body
+
+        form(role='form', method='POST', action!='https://api.formspree.com/&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#x40;&#x6d;&#x79;&#x2d;&#x66;&#x6c;&#x6f;&#x77;&#x2e;&#x63;&#x6f;&#x6d;')
+          input(type='hidden', name='_next', value='#{url}/thanks.html')
+          .form-group
+            label.sr-only(for='name') Name
+            input#name.form-control(type='text', name='_name', placeholder='Your name')
+          .form-group
+            label.sr-only(for='email') Email address
+            input#email.form-control(type='email', name='_replyto', placeholder='Your email address')
+          .form-group
+            label.sr-only(for='message') Message
+            textarea#message.form-control(name='message', placeholder='Your message', rows=3, autofocus='autofocus', required='required')
+          button.btn.btn-primary(type='submit', value='Send') Send

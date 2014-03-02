@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /thanks.html
 Disallow: /alphanum/docs/
 Disallow: /importlist/docs/
 Disallow: /paypalimporter/docs/
