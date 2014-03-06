@@ -68,22 +68,23 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
       .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-left
             li
-              a(href='http://blog.my-flow.com/') Blog
+              a(href='http://blog.my-flow.com/', onclick!='trackOutboundLink(\'http://blog.my-flow.com\'); return false;')
+                | Blog
             li
               a(href='#{url}/contact.html') Contact
 
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='https://github.com/my-flow')
+              a(href='https://github.com/my-flow', onclick!='trackOutboundLink(\'https://github.com/my-flow\'); return false;')
                 em.fa.fa-github
                     span.hidden GitHub
             li
-              a(href='https://www.linkedin.com/in/florianjbreunig/')
+              a(href='https://www.linkedin.com/in/florianjbreunig/', onclick!='trackOutboundLink(\'https://www.linkedin.com/in/florianjbreunig/\'); return false;')
                 em.fa.fa-linkedin
                     span.hidden LinkedIn
 
             li
-              a(href='https://twitter.com/myflow')
+              a(href='https://twitter.com/myflow', onclick!='trackOutboundLink(\'https://twitter.com/myflow\'); return false;')
                 em.fa.fa-twitter
                     span.hidden Twitter
                 | &nbsp;
@@ -142,6 +143,21 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             window.attachEvent("onload", downloadJSAtOnload);
         else
             window.onload = downloadJSAtOnload;
+
+
+        /**
+         * Function that tracks a click on an outbound link in Google Analytics.
+         * This function takes a valid URL string as an argument, and uses that URL string
+         * as the event label.
+         */
+        var trackOutboundLink = function(url) {
+            ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+                function () {
+                    document.location = url;
+                }
+            });
+        }
+
         //]]>
 
 

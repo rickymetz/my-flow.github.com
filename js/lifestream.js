@@ -24,10 +24,6 @@
       service: 'pinboard',
       user: 'my-flow'
     },
-    // {
-    //   service: 'rss',
-    //   user: 'https://feeds.pinboard.in/rss/u:my-flow/'
-    // },
     // Run javascript:alert(userid); when you're logged in at stackoverflow
     {
       service: 'stackoverflow',
