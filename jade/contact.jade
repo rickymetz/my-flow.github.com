@@ -25,10 +25,10 @@ block content
           input(type='hidden', name='_next', value='#{url}/thanks.html')
           .form-group
             label.sr-only(for='name') Name
-            input#name.form-control(type='text', name='_name', placeholder='Your name')
+            input#name.form-control(type='text', name='_name', placeholder='Your name', data-autocomplete='name')
           .form-group
             label.sr-only(for='email') Email address
-            input#email.form-control(type='email', name='_replyto', placeholder='Your email address')
+            input#email.form-control(type='email', name='_replyto', placeholder='Your email address', data-autocomplete='email')
           .form-group
             label.sr-only(for='message') Message
             textarea#message.form-control(name='message', placeholder='Your message', rows=3, autofocus='autofocus', required='required')
