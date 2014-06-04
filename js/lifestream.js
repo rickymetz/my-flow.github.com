@@ -73,7 +73,7 @@
     feedloaded: function(){
       count++;
       // Check if all the feeds have been loaded
-      if( count === list.length + 1){
+      if( count >= list.length ){
         NProgress.done();
         $("#lifestream li").each(function(){
           var element = $(this),
