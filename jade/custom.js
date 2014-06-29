@@ -30,7 +30,7 @@ function downloadJSAtOnload() {
         function() { loadScript("#{url}/nprogress-0.1.2/nprogress.min.js",
             function() { loadScript("#{url}/js/jquery.lifestream.min.js",
                 function() { loadScript("#{url}/js/jquery.timeago-1.3.1.min.js",
-                    function() { loadScript("#{url}/js/lifestream.js",
+                    function() { loadScript("#{url}/js/lifestream.min.js",
                         function() { loadScript("#{url}/js/bootstrap-3.0.3.min.js") }
                     )}
                 )}
