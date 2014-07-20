@@ -25,10 +25,10 @@
       user: 'my-flow'
     },
     // Run javascript:alert(userid); when you're logged in at stackoverflow
-    /*{
+    {
       service: 'stackoverflow',
       user: '662636'
-    },*/
+    },
     {
       service: 'tumblr',
       user: 'my-flow'

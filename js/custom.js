@@ -28,7 +28,7 @@ function downloadJSAtOnload() {
     // jQuery Lifestream
     loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js",
         function() { loadScript("//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.2/nprogress.min.js",
-            function() { loadScript("#{url}/js/jquery.lifestream-0.4.3.min.js",
+            function() { loadScript("#{url}/js/jquery.lifestream-0.5.1.min.js",
                 function() { loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.3.1/jquery.timeago.min.js",
                     function() { loadScript("#{url}/js/lifestream.min.js",
                         function() { loadScript("//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js") }
