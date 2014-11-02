@@ -28,8 +28,49 @@ block content
                 span(itemprop='region') Germany
                 |.
 
+  .panel
 
     .panel-body
+
+      h3 You might know me from
+
+      .row
+        .col-lg-2
+          a(href='https://www.hackerschool.com', onclick!='trackOutboundLink(\'https://www.hackerschool.com\'); return false;')
+            img(src='#{url}/img/icon-hackerschool.png', alt='Hacker School', width=32, height=32)
+        .col-lg-4
+          a(href='https://www.hackerschool.com', onclick!='trackOutboundLink(\'https://www.hackerschool.com\'); return false;')
+            | Hacker School, 2014
+
+      .row
+        .col-lg-2
+          a(href='https://www.lendstar.io', onclick!='trackOutboundLink(\'https://www.lendstar.io\'); return false;')
+            img(src='#{url}/img/icon-lendstar.png', alt='Lendstar', width=32, height=32)
+        .col-lg-4
+          a(href='https://www.lendstar.io', onclick!='trackOutboundLink(\'https://www.lendstar.io\'); return false;')
+            | Lendstar, 2013&ndash;present
+
+      .row
+        .col-lg-2
+          a(href='https://www.tu-darmstadt.de', onclick!='trackOutboundLink(\'https://www.tu-darmstadt.de\'); return false;')
+            img(src='#{url}/img/icon-tu-darmstadt.png', alt='TU Darmstadt', width=32, height=32)
+        .col-lg-4
+          a(href='https://www.tu-darmstadt.de', onclick!='trackOutboundLink(\'https://www.tu-darmstadt.de\'); return false;')
+            | TU Darmstadt, 2003&ndash;2009
+
+      .row
+        .col-lg-2
+          a(href='https://www.ntnu.edu', onclick!='trackOutboundLink(\'https://www.ntnu.edu\'); return false;')
+            img(src='#{url}/img/icon-ntnu-trondheim.png', alt='NTNU Trondheim', width=32, height=32)
+        .col-lg-4
+          a(href='https://www.ntnu.edu', onclick!='trackOutboundLink(\'https://www.ntnu.edu\'); return false;')
+            | NTNU Trondheim, 2006&ndash;2007
+
+  .panel
+
+    .panel-body
+
+        h3 or elsewhere
 
         .row
           .col-lg-2
@@ -86,8 +127,8 @@ block content
 
           em.panel-heading.fa.fa-spinner.fa-spin
 
-      #hidden-lifestream.hidden
+      #hidden-lifestream.panel-body.hidden
 
-          h3.panel-heading Lifestream
+          h3 Lifestream
 
-          #lifestream.panel-body
+          #lifestream
