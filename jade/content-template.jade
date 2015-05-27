@@ -24,11 +24,11 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     title #{title}
 
     // NProgress
-    link(rel='stylesheet', href='#{url}/nprogress-0.1.2/nprogress.css')
+    link(rel='stylesheet', href='#{url}/nprogress-0.2.0/nprogress.css')
     link(rel='stylesheet', href='#{url}/css/nprogress-bootstrap.css')
 
     // Font Awesome
-    link(rel='stylesheet' type='text/css' href='#{url}/font-awesome-4.0.3/css/font-awesome.min.css')
+    link(rel='stylesheet' type='text/css' href='#{url}/font-awesome-4.3.0/css/font-awesome.min.css')
 
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //[if lt IE 9]>
@@ -44,7 +44,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     link(rel='stylesheet', type='text/css', href='#{url}/css/lifestream-0.5.2.css')
 
     // Bootstrap
-    link(rel='stylesheet', href='#{url}/css/bootstrap-3.2.min.css')
+    link(rel='stylesheet', href='#{url}/css/bootstrap-3.3.4.min.css')
 
     // Custom styles for this template
     link(rel='stylesheet', href='#{url}/css/style.css')
@@ -96,7 +96,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
 
 
     script(type='text/javascript').
-        function loadScript(e,t){var n,r,i;r=false;n=document.createElement("script");n.type="text/javascript";n.src=e;n.onload=n.onreadystatechange=function(){if(!r&&(!this.readyState||this.readyState=="complete")){r=true;if(typeof t!=="undefined"){t()}}};i=document.getElementsByTagName("script")[0];i.appendChild(n)}function downloadJSAtOnload(){loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js",function(){loadScript("//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.2/nprogress.min.js",function(){loadScript("#{url}/js/jquery.lifestream-0.5.2.min.js",function(){loadScript("#{url}/js/lifestream.min.js",function(){loadScript("#{url}/js/bootstrap-3.2.min.js")})})})})}if(window.addEventListener)window.addEventListener("load",downloadJSAtOnload,false);else if(window.attachEvent)window.attachEvent("onload",downloadJSAtOnload);else window.onload=downloadJSAtOnload;var trackOutboundLink=function(e){ga("send","event","outbound","click",e,{hitCallback:function(){document.location=e}})}
+        function loadScript(e,t){var n,r,i;r=false;n=document.createElement("script");n.type="text/javascript";n.src=e;n.onload=n.onreadystatechange=function(){if(!r&&(!this.readyState||this.readyState=="complete")){r=true;if(typeof t!=="undefined"){t()}}};i=document.getElementsByTagName("script")[0];i.appendChild(n)}function downloadJSAtOnload(){loadScript("//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js",function(){loadScript("//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js",function(){loadScript("#{url}/js/jquery.lifestream-0.5.2.min.js",function(){loadScript("#{url}/js/lifestream.min.js",function(){loadScript("#{url}/js/bootstrap-3.3.4.min.js")})})})})}if(window.addEventListener)window.addEventListener("load",downloadJSAtOnload,false);else if(window.attachEvent)window.attachEvent("onload",downloadJSAtOnload);else window.onload=downloadJSAtOnload;var trackOutboundLink=function(e){ga("send","event","outbound","click",e,{hitCallback:function(){document.location=e}})}
 
     if includeTrackingCode
       script(type='text/javascript').
