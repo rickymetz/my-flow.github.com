@@ -30,7 +30,9 @@ function downloadJSAtOnload() {
         function() { loadScript("//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js",
             function() { loadScript("#{url}/js/jquery.lifestream-0.5.2.min.js",
                 function() { loadScript("#{url}/js/lifestream.min.js",
-                    function() { loadScript("#{url}/js/bootstrap-3.3.4.min.js") }
+                    function() { loadScript("#{url}/js/bootstrap-3.3.4.min.js",
+                      function() { loadScript("#{url}/js/coverr.min.js"); }
+                    )}
                 )}
             )}
         )}

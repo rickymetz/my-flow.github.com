@@ -7,7 +7,17 @@ block vars
 
 block background-wrap
 
-  .background-wrap.resize
+  .background-wrap
+    //-.resize
+
+    .homepage-hero-module
+      .video-container
+        .filter
+        video.fillWidth(autoplay, loop, poster="#{url}/coverr/The-Boulevard.jpg")
+          source(src='#{url}/coverr/The-Boulevard.mp4', type='video/mp4')
+          source(src='#{url}/coverr/The-Boulevard.webm', type='video/webm')
+        .poster.hidden
+          img(src='#{url}/coverr/The-Boulevard.jpg', alt='The Boulevard', width=1920, height=1080)
 
 
 block content
@@ -36,19 +46,19 @@ block content
 
       .row
         .col-lg-2
-          a(href='https://www.hackerschool.com', onclick!='trackOutboundLink(\'https://www.hackerschool.com\'); return false;')
-            img(src='#{url}/img/icon-hackerschool.png', alt='Hacker School', width=32, height=32)
-        .col-lg-4
-          a(href='https://www.hackerschool.com', onclick!='trackOutboundLink(\'https://www.hackerschool.com\'); return false;')
-            | Hacker School, 2014
-
-      .row
-        .col-lg-2
           a(href='https://www.lendstar.io', onclick!='trackOutboundLink(\'https://www.lendstar.io\'); return false;')
             img(src='#{url}/img/icon-lendstar.png', alt='Lendstar', width=32, height=32)
         .col-lg-4
           a(href='https://www.lendstar.io', onclick!='trackOutboundLink(\'https://www.lendstar.io\'); return false;')
             | Lendstar, 2013&ndash;present
+
+      .row
+        .col-lg-2
+          a(href='https://www.recurse.com', onclick!='trackOutboundLink(\'https://www.recurse.com\'); return false;')
+            img(src='#{url}/img/icon-hackerschool.png', alt='Hacker School / The Recurse Center', width=32, height=32)
+        .col-lg-4
+          a(href='https://www.recurse.com', onclick!='trackOutboundLink(\'https://www.recurse.com\'); return false;')
+            | Hacker School, 2014
 
       .row
         .col-lg-2
